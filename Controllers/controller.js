@@ -71,5 +71,19 @@ meanApp.controller('feedsController',function($scope,$window,meanFactory){
 	
 });
 
-
+meanApp.controller('postController',function($scope){
+	
+	$scope.is_valid_url = function (url){
+     var checkHttp = url.indexOf('http') != -1  ?true:false;
+     var checkHttps = url.indexOf('https') != -1  ?true:false;
+     var checkdot = url.indexOf('www') != -1  ?true:false;
+     
+      if (checkHttp || checkHttps || checkdot)   
+      		return true;
+      else
+      		return false;
+     
+	}
+	
+});
 

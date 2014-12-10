@@ -6,6 +6,6 @@ meanApp.directive('singleFeed',function(){
 			feedtext: "="
 		},
 		templateUrl:'Partials/Posts.html',
-		
+		controller:'postController'
 	}
 });

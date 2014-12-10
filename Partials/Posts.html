@@ -3,7 +3,15 @@
     <div class="pull-right">
     	<a  href ng-click="removeFeed({Id:feedtext.Id})"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
     </div>
-    <div>{{feedtext.feed}}</div>
+    
+    	<div ng-show='is_valid_url("{{feedtext.feed}}")'>
+    	IsURL
+    	<a href='{{feedtext.feed}}' target='_blank'>{{feedtext.feed}}</a>
+    	</div>
+	    <div ng-hide='is_valid_url("{{feedtext.feed}}")'>
+    	<div>{{feedtext.feed}}</div>
+    	</div>
+    
     <div ng-hide="true">{{feedtext.id}}</div>
     <div class="pull-right">{{feedtext.time | date:'M/d/yy h:mm:s a'}}</div>
   </div>
