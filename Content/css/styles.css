@@ -1,0 +1,53 @@
+
+#body{
+	
+}
+
+.navbarMean{
+	margin-bottom: -59px ! important;
+}
+
+#myCarousel {
+	margin-top: 60px;
+}
+
+.carousel-caption {
+	font-size: 24px;
+}
+
+.carousel-caption h4 {
+	font-size: 32px;
+}
+
+#myCarousel .item { 
+	height: calc(100% - 100px);
+	
+	}
+
+#slide1 {
+	background: url('img/img1.png') top center no-repeat;
+	background-color: #BCBCBC;
+	
+}
+
+#slide2 {
+	background: url('img/img2.jpg') top center no-repeat;
+
+}
+
+#slide3 {
+	background: url('img/img3.jpg') top center no-repeat;
+}
+
+.footerStyle{
+ background-color: rgb(218, 218, 218) !important;
+}
+
+.emptySpace{
+	margin-top:3px;
+	margin-bottom:3px;
+}
+
+#main{
+	height: calc(100% - 40px);
+}

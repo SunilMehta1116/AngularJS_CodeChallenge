@@ -1,0 +1,98 @@
+ <div id="Main">
+     <!-- Custom CSS -->
+		<link rel="stylesheet" href="Content/css/sidebar.css"></link>
+				<!-- Custom CSS -->
+		<link rel="stylesheet" href="Content/css/profile.css"></link>
+		
+	
+		
+		
+		<div>
+		</div>  
+ 	
+    <div class="container mainContainer">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-3 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+             <ul class="nav">
+              <li class="active"><a ng-href="#/profile">Profile</a></li>
+              <li><a ng-href="#/feeds">Feed</a></li>
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-5 col-sm-6">
+          <h1>Profile</h1>
+          <form class="form-horizontal" role="form" >
+          	
+          	<div class="form-group">
+          		<div class="col-sm-10">
+          			<input type="text" class="form-control"  id="txtName" placeholder="YOUR NAME" ng-model="name" required>
+          		</div>
+          	</div> <!-- end FormGroup -->
+          	
+          	
+          	<div class="form-group">
+          		<div class="col-sm-10">
+          			<input type="number" class="form-control" id="txtAGE" placeholder="YOUR AGE" ng-model="age" min="1" max="100">
+          		</div>
+          	</div> <!-- end FormGroup -->
+          	
+          	
+          	
+          	
+          	  <div class="form-group">
+          		<div class="col-sm-10">
+          			<input type="text" class="form-control" id="txtPhone" placeholder="YOUR PHONE IN XXX-XXX-XXXX" ng-model="phone"  required>
+          		</div>
+          	</div> <!-- end FormGroup -->
+          	
+          	
+          	
+          	  <div class="form-group">
+          		<div class="col-sm-10">
+          			<input type="email"  class="form-control" id="txtName" placeholder="YOUR EMAIL ADDRESS" ng-model="email" required>
+          		</div>
+          	</div> <!-- end FormGroup -->
+
+          	
+          	  <div class="form-group">
+          		<div class="col-sm-10">
+          			<textarea class="form-control" id="txtAddress" placeholder="YOUR ADDRESS" rows="3" ng-model="address" required></textarea>
+          		</div>
+          	</div> <!-- end FormGroup -->    
+          	
+ 
+          	
+			          	
+          	  <div class="form-group">
+          		<div class="col-sm-10">
+          			<span class="btn btn-default">
+    					 <input Id="file" type="file" onChange='angular.element(this).scope().previewFile(this)'></input>
+					</span>
+          		</div>
+          	</div> <!-- end FormGroup -->  
+          	           	          	          	
+          	
+          	
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default" ng-click="insertUser()" >Submit</button>
+			    </div>
+			  </div>
+          	
+          </form> <!-- end form horizontal -->
+
+          
+        </div><!-- /.col-xs-12 main -->
+   		
+   		<div class="col-xs-4 col-sm-3">
+			<img id="myimage" class="imgHolder" src="" height="150px" width="150px" alt="Image Preview" ></img>
+     		
+   		</div>
+   
+    </div><!--/.row-->
+  
+  	</div><!--/.container-->
+ </div>

@@ -1,0 +1,142 @@
+
+
+<html ng-app="meanApp">
+
+	<!--All scripts go here-->
+
+	<head>
+
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<title>Books App:: MEAN STACK:: CODE CHALLENGE</title>
+
+		<!--JQUERY scripts go here-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<!--Angular scripts go here-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+		
+
+		<script src="https://code.angularjs.org/1.2.27/angular-route.js" ></script>
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="Content/css/styles.css"></link>
+		
+		
+		<!-- <script src="Partials/upload.js"></script> --> 
+
+	</head>
+
+	<body >
+
+		<div ng-controller="loginController" >
+			<div id="signUp" ng-hide="isLogged">
+				<nav class="navbar navbar-default navbarMean" role="navigation">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">MY BOOK</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+							<ul class="nav navbar-nav navbar-right">
+								<form class="navbar-form navbar-left" role="login">
+									<div class="form-group">
+										<input type="text"  class="form-control" placeholder="Username" ng-model="loggedUser.userName">
+										<input type="password"  class="form-control" placeholder="Password" ng-model="loggedUser.password" >
+									</div>
+									<button type="submit" class="btn btn-default" ng-click='authenticate()'>
+										Login
+									</button>
+								</form>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+			<div id="loggedIN" ng-show="isLogged">
+				<nav class="navbar navbar-default navbarMean" role="navigation">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">MEAN STACK</a>
+						</div>
+
+					
+						
+						
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+							<ul class="nav navbar-nav navbar-right">
+								<form class="navbar-form navbar-left" role="login">
+									<ul class="nav navbar-nav navbar-right">
+										<li>
+											<a href="#" ng-href='index.html'>Sign Out</a>
+										</li>
+									</ul>
+								</form>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+						
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</div>
+
+		<div class="container" ng-view="">
+			
+		</div>
+
+		<div class="emptySpace">
+			
+		</div>
+		
+			<div class="footer footerStyle">
+				<div class="container">
+				<h4>
+					Talent Improving exercise, OFS
+				</h4>
+				</div><!-- end container -->
+			</div>
+		
+	</body>
+
+	<!--App scripts go here-->
+	<script src="app.js"></script>
+
+	<!--Controller scripts go here-->
+	<script src="Controllers/controller.js"></script>
+	
+	
+	<!--Controller scripts go here-->
+	<script src="Factory/factory.js"></script>
+	
+	
+	<!--Controller scripts go here-->
+	<script src="Directives/directives.js"></script>
+
+</html>

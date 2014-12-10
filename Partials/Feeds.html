@@ -1,0 +1,54 @@
+ <div id="Main">
+     <!-- Custom CSS -->
+		<link rel="stylesheet" href="Content/css/sidebar.css"></link>
+		<link rel="stylesheet" href="Content/css/feeds.css"></link>
+				<link rel="stylesheet" href="Content/css/posts.css"></link>
+		
+		<div>
+		
+		</div>  
+ 	
+    <div class="container mainContainer">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li class="active"><a ng-href="#/profile">Profile</a></li>
+              <li><a ng-href="#/feeds">Feed</a></li>
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-9">
+          <h3>Make Your Post</h3>
+          
+		<form class="form-inline" role="form">
+		  <div class="form-group">
+		    <div class="input-group">
+		      <input type="text" class="form-control feedInput" ng-model="newFeed" id="txtFeed" placeholder="Enter Feed or URL">
+		    </div>
+		  </div>
+		  
+		<div class="form-group">
+    		<button id="btnSaveFeed" ng-click="addFeed()" >POST<span class="glyphicon glyphicon-save feedBtn" aria-hidden="true"></span></button>
+  		</div>
+		  
+		  
+		  <div id="feeds">
+		  <h4>
+		  	Your Posts
+		  </h4>
+		  <div ng-repeat="afeed in allFeeds">
+		  	<single-feed feedtext="afeed" remove-feed="deleteFeed(Id)"></single-feed>	
+		  </div>
+		  
+		  </div>
+		  
+		 </form>
+		
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  
+  	</div><!--/.container-->
+ </div>
